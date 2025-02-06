@@ -44,7 +44,7 @@ namespace week2_assignment
         {
             if (amount <= 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(amount), "Amount of deposit must be positive");
+                throw new ArgumentOutOfRangeException(nameof(amount), "Amount to be deposited must be positive");
             }
             var deposit = new Transaction(amount, date, note);
             _allTransactions.Add(deposit);
@@ -54,7 +54,7 @@ namespace week2_assignment
         {
             if (amount <= 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
+                throw new ArgumentOutOfRangeException(nameof(amount), "Withdrawal amount must be positive");
             }
             Transaction? overdraftTransaction = CheckWithdrawalLimit(Balance - amount < _minimumBalance);
             Transaction? withdrawal = new(-amount, date, note);
@@ -67,7 +67,7 @@ namespace week2_assignment
         {
             if (isOverdrawn)
             {
-                throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+                throw new InvalidOperationException("Insufficient funds for this withdrawal");
             }
             else
             {

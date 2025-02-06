@@ -1,10 +1,10 @@
 ﻿using week2_assignment;
 
 Console.WriteLine("Bank Account: \n");
-var account = new BankAccount("Ryyan", 1000);
+var account = new BankAccount("Ryyan", 5000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 
-account.MakeWithdrawal(545, DateTime.Now, "Rent payment");
+account.MakeWithdrawal(1050, DateTime.Now, "Rent payment");
 //Console.WriteLine(account.Balance);
 account.MakeDeposit(200, DateTime.Now, "Friend paid me back");
 //Console.WriteLine(account.Balance);
@@ -36,8 +36,8 @@ Console.WriteLine(account.GetAccountHistory());
 
 
 Console.WriteLine("Gift Card Account: \n");
-var giftCard = new GiftCardAccount("gift card", 300, 50);
-giftCard.MakeWithdrawal(7.50m, DateTime.Now, "get expensive coffee");
+var giftCard = new GiftCardAccount("Gift Card", 300, 50);
+giftCard.MakeWithdrawal(7.50m, DateTime.Now, "bought coffee");
 giftCard.MakeWithdrawal(50, DateTime.Now, "buy groceries");
 giftCard.PerformMonthEndTransactions();
 // can make additional deposits:
@@ -48,7 +48,7 @@ Console.WriteLine("Interest Earning Account: \n");
 var savings = new InterestEarningAccount("savings account", 10000);
 savings.MakeDeposit(900, DateTime.Now, "save some money");
 savings.MakeDeposit(2000, DateTime.Now, "Add more savings");
-savings.MakeWithdrawal(450, DateTime.Now, "Needed to pay monthly bills");
+savings.MakeWithdrawal(450, DateTime.Now, "Paid monthly bills");
 savings.PerformMonthEndTransactions();
 Console.WriteLine(savings.GetAccountHistory());
 

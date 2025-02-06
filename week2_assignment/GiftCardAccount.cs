@@ -16,7 +16,7 @@ namespace week2_assignment
         {
             if (_monthlyDeposit != 0)
             {
-                MakeDeposit(_monthlyDeposit, DateTime.Now, "Add monthly deposit");
+                MakeDeposit(_monthlyDeposit, DateTime.Now, "Monthly deposit");
             }
         }
     }

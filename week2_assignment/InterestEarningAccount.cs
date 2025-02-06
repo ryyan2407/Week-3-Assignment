@@ -16,7 +16,7 @@ namespace week2_assignment
             if (Balance > 500m)
             {
                 decimal interest = Balance * 0.02m;
-                MakeDeposit(interest, DateTime.Now, "apply monthly interest");
+                MakeDeposit(interest, DateTime.Now, "Monthly interest");
             }
         }
     }
